@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'AHSwipeViewControllerContainer/**/*'
+  s.source_files = 'AHSwipeViewControllerContainer/Classes/**/*'
   
   # s.resource_bundles = {
   #   'AHSwipeViewControllerContainer' => ['AHSwipeViewControllerContainer/Assets/*.png']

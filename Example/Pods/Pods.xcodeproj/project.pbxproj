@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		1A2339F440777CD1C3AA1C92BF86F57E /* Pods-AHSwipeViewControllerContainer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E4801442B26468F857F7EA24DB50E /* Pods-AHSwipeViewControllerContainer_Tests-dummy.m */; };
 		2E6D319BD320313ABAF23ABB23FEC01F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		38DC43B20436A0B03D75F4ED89E748F8 /* AHSwipeViewControllerContainer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69510BA54824F008715F2B9885CA2C8C /* AHSwipeViewControllerContainer-dummy.m */; };
 		409D8E2CE876D4F527BC707977B5DCD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4A5569824DE85CDBE3C74723FD012036 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */; };
 		825E3BB81860F84F4D06CB2795156947 /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD86C541637B08CDA6BE077781F74B /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		895346E72012EA140068B050 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346E62012EA140068B050 /* AnimatedViewController.swift */; };
-		895346EC2012EA1C0068B050 /* AHSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346E82012EA1C0068B050 /* AHSwipeDirection.swift */; };
-		895346ED2012EA1C0068B050 /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346E92012EA1C0068B050 /* FrameProvider.swift */; };
-		895346EE2012EA1C0068B050 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346EA2012EA1C0068B050 /* Animator.swift */; };
-		895346EF2012EA1C0068B050 /* AHSwipeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346EB2012EA1C0068B050 /* AHSwipeViewControllerContainer.swift */; };
-		90FAD3FAA5808E29059B7188BF8DCEA4 /* AHSwipeViewControllerContainer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDDA16871C7C6461D41F4173772338 /* AHSwipeViewControllerContainer-dummy.m */; };
-		9216654DDBBFE2D7CAD5CCCCBEA8915E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A14F1F3B411DA258F2FD40479B48F03A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A38D2D3A8182E1DF785AAD176DDEF4F6 /* AHSwipeViewControllerContainer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9EBB37316DA7AF9C071E2FBF05F963 /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4383D8CB158E17B846C0FB2690FCF5AB /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6EDA7451CF7047CC977005F95EEA219 /* AHSwipeViewControllerContainer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3798E912C3212D14ABC24706237A6888 /* AHSwipeViewControllerContainer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1AAE32F8C8139AB9D7D614B8871F593 /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */; };
+		C8FA2E425A0E627D27B2484926B7376E /* AHSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */; };
+		CED8DFE7A55F22C640E9EF93CDFFC40F /* AHSwipeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */; };
 		FA411EFFF1789EA529441809CDB79FFB /* Pods-AHSwipeViewControllerContainer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB84C3AA1FCBE107CA1BBDF39C576 /* Pods-AHSwipeViewControllerContainer_Example-dummy.m */; };
+		FDC379CF138BA8D7E726A7B765B931D8 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,47 +28,47 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 38A0E44EFEBB92E9424307D96DBA9C1A;
+			remoteGlobalIDString = 4A46CD34ADC5D1DCA716CF6BF6F3705B;
 			remoteInfo = AHSwipeViewControllerContainer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EEDDA16871C7C6461D41F4173772338 /* AHSwipeViewControllerContainer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHSwipeViewControllerContainer-dummy.m"; sourceTree = "<group>"; };
+		0A156E67D4A904E4F14546AB93DF234D /* AHSwipeViewControllerContainer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-prefix.pch"; sourceTree = "<group>"; };
 		0F3E4801442B26468F857F7EA24DB50E /* Pods-AHSwipeViewControllerContainer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHSwipeViewControllerContainer_Tests-dummy.m"; sourceTree = "<group>"; };
-		119DAEA71F24DA7B7A7ED9361CBC21FE /* AHSwipeViewControllerContainer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AHSwipeViewControllerContainer.modulemap; sourceTree = "<group>"; };
+		108211BF0A16E123BFA86C6B2FB57F2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = AHSwipeViewControllerContainer/Classes/Animator.swift; sourceTree = "<group>"; };
 		1462ED1665AD3C6EE4041953267C4BA6 /* Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		179B48BE63BA5684A0B4B9FC40573FA0 /* Pods-AHSwipeViewControllerContainer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AHSwipeViewControllerContainer_Example.modulemap"; sourceTree = "<group>"; };
+		179B48BE63BA5684A0B4B9FC40573FA0 /* Pods-AHSwipeViewControllerContainer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AHSwipeViewControllerContainer_Example.modulemap"; sourceTree = "<group>"; };
 		1C8212AF21655CBD1E01456DC621B236 /* Pods-AHSwipeViewControllerContainer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Tests-resources.sh"; sourceTree = "<group>"; };
 		1EFE7ACF10C17447DF62C487B48D27A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A0FA2669D8DDBBB0F5B0B39847824B /* Pods-AHSwipeViewControllerContainer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		23B066853B6A407DE4FBD4FCAFF7D334 /* AHSwipeViewControllerContainer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHSwipeViewControllerContainer.xcconfig; sourceTree = "<group>"; };
 		2C5A053A72AAA8E38AFEFE82BF6EE2E4 /* Pods-AHSwipeViewControllerContainer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2D5766D3A48A07878D98BA68CE1DF62D /* AHSwipeViewControllerContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AHSwipeViewControllerContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3798E912C3212D14ABC24706237A6888 /* AHSwipeViewControllerContainer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-umbrella.h"; sourceTree = "<group>"; };
-		39EDB65384CC0ECB89C4942D94CDC950 /* Pods_AHSwipeViewControllerContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHSwipeViewControllerContainer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5766D3A48A07878D98BA68CE1DF62D /* AHSwipeViewControllerContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AHSwipeViewControllerContainer.framework; path = AHSwipeViewControllerContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39EDB65384CC0ECB89C4942D94CDC950 /* Pods_AHSwipeViewControllerContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AHSwipeViewControllerContainer_Example.framework; path = "Pods-AHSwipeViewControllerContainer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-umbrella.h"; sourceTree = "<group>"; };
 		4383D8CB158E17B846C0FB2690FCF5AB /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHSwipeViewControllerContainer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AHSwipeViewControllerContainer.swift; path = AHSwipeViewControllerContainer/Classes/AHSwipeViewControllerContainer.swift; sourceTree = "<group>"; };
+		5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameProvider.swift; path = AHSwipeViewControllerContainer/Classes/FrameProvider.swift; sourceTree = "<group>"; };
 		574374B9CBD413A75A92A4C136173568 /* Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5FC4D46287F440E9F4FFBA2763487D73 /* Pods-AHSwipeViewControllerContainer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Example-resources.sh"; sourceTree = "<group>"; };
-		65153396DE111A6F7EF3D456AFC3348B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69510BA54824F008715F2B9885CA2C8C /* AHSwipeViewControllerContainer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHSwipeViewControllerContainer-dummy.m"; sourceTree = "<group>"; };
 		6E99398FF1943F218A95ACB00DAEB7A4 /* Pods-AHSwipeViewControllerContainer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		729D1084C3DEEBB7C0FBBCC42779F6A5 /* Pods-AHSwipeViewControllerContainer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHSwipeViewControllerContainer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		762008B7E4946F4AE2CD0326FA31B5FC /* Pods_AHSwipeViewControllerContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHSwipeViewControllerContainer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		762008B7E4946F4AE2CD0326FA31B5FC /* Pods_AHSwipeViewControllerContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AHSwipeViewControllerContainer_Tests.framework; path = "Pods-AHSwipeViewControllerContainer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AD86C541637B08CDA6BE077781F74B /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHSwipeViewControllerContainer_Example-umbrella.h"; sourceTree = "<group>"; };
 		83651B7237FB38D3AB70C93F210F5522 /* Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		895346E62012EA140068B050 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
-		895346E82012EA1C0068B050 /* AHSwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHSwipeDirection.swift; sourceTree = "<group>"; };
-		895346E92012EA1C0068B050 /* FrameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameProvider.swift; sourceTree = "<group>"; };
-		895346EA2012EA1C0068B050 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		895346EB2012EA1C0068B050 /* AHSwipeViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHSwipeViewControllerContainer.swift; sourceTree = "<group>"; };
 		89E6C3AF92ACEE9F5D85264F36471D09 /* Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8AD41E306C3DB5D183648532DB0039F0 /* AHSwipeViewControllerContainer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHSwipeViewControllerContainer.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedViewController.swift; path = AHSwipeViewControllerContainer/Classes/AnimatedViewController.swift; sourceTree = "<group>"; };
 		A33AE237D3040890CA6F5F086424217D /* Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B51AD1937012B5F2687B1911172A7511 /* Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B7D15608F905BFD812E5E8D612D723DA /* AHSwipeViewControllerContainer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-prefix.pch"; sourceTree = "<group>"; };
+		C0ACCE19E0D20E64EE6BA9B2C3BE13C2 /* AHSwipeViewControllerContainer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AHSwipeViewControllerContainer.modulemap; sourceTree = "<group>"; };
 		DC2EDD27DFEA5921A99A62186DDCE178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6A7577A8C2ADB0F28FEC289FBCB7E54 /* Pods-AHSwipeViewControllerContainer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AHSwipeViewControllerContainer_Tests.modulemap"; sourceTree = "<group>"; };
+		E6A7577A8C2ADB0F28FEC289FBCB7E54 /* Pods-AHSwipeViewControllerContainer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AHSwipeViewControllerContainer_Tests.modulemap"; sourceTree = "<group>"; };
+		F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AHSwipeDirection.swift; path = AHSwipeViewControllerContainer/Classes/AHSwipeDirection.swift; sourceTree = "<group>"; };
 		FB6FB84C3AA1FCBE107CA1BBDF39C576 /* Pods-AHSwipeViewControllerContainer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHSwipeViewControllerContainer_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,14 +81,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EE5D1CD2BEA49F6A711BEF5DD6473ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9216654DDBBFE2D7CAD5CCCCBEA8915E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4A0AE386F1897E23AEE8272BC122B515 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,31 +89,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D06E9A0FFC7ECCBBAE7EB5873658AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F1F3B411DA258F2FD40479B48F03A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		422E540F9CFE4CB3C9EA52FE77D85FCD /* AHSwipeViewControllerContainer */ = {
-			isa = PBXGroup;
-			children = (
-				895346E62012EA140068B050 /* AnimatedViewController.swift */,
-				895346E82012EA1C0068B050 /* AHSwipeDirection.swift */,
-				895346EB2012EA1C0068B050 /* AHSwipeViewControllerContainer.swift */,
-				895346EA2012EA1C0068B050 /* Animator.swift */,
-				895346E92012EA1C0068B050 /* FrameProvider.swift */,
-				AD0D6DB35B91B3536623A07660F73033 /* Support Files */,
-			);
-			name = AHSwipeViewControllerContainer;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		512D9C3CD27CA6F18537E49472B03B4A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				422E540F9CFE4CB3C9EA52FE77D85FCD /* AHSwipeViewControllerContainer */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		54A7CFF42A09776301E72FB5E658A973 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,15 +128,37 @@
 			path = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example";
 			sourceTree = "<group>";
 		};
+		77486D8E3580456FDEF8A4EE09972501 /* AHSwipeViewControllerContainer */ = {
+			isa = PBXGroup;
+			children = (
+				F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */,
+				45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */,
+				980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */,
+				11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */,
+				5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */,
+				A5F3DE54B44ED2912F5A599CFD768357 /* Support Files */,
+			);
+			name = AHSwipeViewControllerContainer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				512D9C3CD27CA6F18537E49472B03B4A /* Development Pods */,
+				7ECB4614A020AC0694B781AE0014216A /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				54A7CFF42A09776301E72FB5E658A973 /* Products */,
 				98D664C41C3D6BF50DEEB351E03716A5 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7ECB4614A020AC0694B781AE0014216A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77486D8E3580456FDEF8A4EE09972501 /* AHSwipeViewControllerContainer */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		98D664C41C3D6BF50DEEB351E03716A5 /* Targets Support Files */ = {
@@ -170,15 +170,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AD0D6DB35B91B3536623A07660F73033 /* Support Files */ = {
+		A5F3DE54B44ED2912F5A599CFD768357 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				119DAEA71F24DA7B7A7ED9361CBC21FE /* AHSwipeViewControllerContainer.modulemap */,
-				8AD41E306C3DB5D183648532DB0039F0 /* AHSwipeViewControllerContainer.xcconfig */,
-				0EEDDA16871C7C6461D41F4173772338 /* AHSwipeViewControllerContainer-dummy.m */,
-				B7D15608F905BFD812E5E8D612D723DA /* AHSwipeViewControllerContainer-prefix.pch */,
-				3798E912C3212D14ABC24706237A6888 /* AHSwipeViewControllerContainer-umbrella.h */,
-				65153396DE111A6F7EF3D456AFC3348B /* Info.plist */,
+				C0ACCE19E0D20E64EE6BA9B2C3BE13C2 /* AHSwipeViewControllerContainer.modulemap */,
+				23B066853B6A407DE4FBD4FCAFF7D334 /* AHSwipeViewControllerContainer.xcconfig */,
+				69510BA54824F008715F2B9885CA2C8C /* AHSwipeViewControllerContainer-dummy.m */,
+				0A156E67D4A904E4F14546AB93DF234D /* AHSwipeViewControllerContainer-prefix.pch */,
+				42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */,
+				108211BF0A16E123BFA86C6B2FB57F2B /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/AHSwipeViewControllerContainer";
@@ -229,11 +229,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74F4A89220442EE990849F23269D9EC6 /* Headers */ = {
+		4A339E3DA08F430C7DF195673B710258 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6EDA7451CF7047CC977005F95EEA219 /* AHSwipeViewControllerContainer-umbrella.h in Headers */,
+				A38D2D3A8182E1DF785AAD176DDEF4F6 /* AHSwipeViewControllerContainer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,13 +266,13 @@
 			productReference = 39EDB65384CC0ECB89C4942D94CDC950 /* Pods_AHSwipeViewControllerContainer_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		38A0E44EFEBB92E9424307D96DBA9C1A /* AHSwipeViewControllerContainer */ = {
+		4A46CD34ADC5D1DCA716CF6BF6F3705B /* AHSwipeViewControllerContainer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1B86BEE16F452D268FAB244B10BFFB9 /* Build configuration list for PBXNativeTarget "AHSwipeViewControllerContainer" */;
+			buildConfigurationList = CC509C54AF7647B77BDA21A6259B9CB1 /* Build configuration list for PBXNativeTarget "AHSwipeViewControllerContainer" */;
 			buildPhases = (
-				57AF6B0B78DDA274F040AABE1967B14F /* Sources */,
-				1EE5D1CD2BEA49F6A711BEF5DD6473ED /* Frameworks */,
-				74F4A89220442EE990849F23269D9EC6 /* Headers */,
+				AE8A035412C738DF44D797F0BCAA2705 /* Sources */,
+				4D06E9A0FFC7ECCBBAE7EB5873658AE9 /* Frameworks */,
+				4A339E3DA08F430C7DF195673B710258 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -307,7 +307,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,7 +321,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38A0E44EFEBB92E9424307D96DBA9C1A /* AHSwipeViewControllerContainer */,
+				4A46CD34ADC5D1DCA716CF6BF6F3705B /* AHSwipeViewControllerContainer */,
 				1C6EE04FCD933078C8BAE2D43524EC25 /* Pods-AHSwipeViewControllerContainer_Example */,
 				7AE3517140621863E270B3E22CCA5654 /* Pods-AHSwipeViewControllerContainer_Tests */,
 			);
@@ -345,16 +345,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57AF6B0B78DDA274F040AABE1967B14F /* Sources */ = {
+		AE8A035412C738DF44D797F0BCAA2705 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				895346EE2012EA1C0068B050 /* Animator.swift in Sources */,
-				90FAD3FAA5808E29059B7188BF8DCEA4 /* AHSwipeViewControllerContainer-dummy.m in Sources */,
-				895346E72012EA140068B050 /* AnimatedViewController.swift in Sources */,
-				895346EC2012EA1C0068B050 /* AHSwipeDirection.swift in Sources */,
-				895346ED2012EA1C0068B050 /* FrameProvider.swift in Sources */,
-				895346EF2012EA1C0068B050 /* AHSwipeViewControllerContainer.swift in Sources */,
+				C8FA2E425A0E627D27B2484926B7376E /* AHSwipeDirection.swift in Sources */,
+				38DC43B20436A0B03D75F4ED89E748F8 /* AHSwipeViewControllerContainer-dummy.m in Sources */,
+				CED8DFE7A55F22C640E9EF93CDFFC40F /* AHSwipeViewControllerContainer.swift in Sources */,
+				4A5569824DE85CDBE3C74723FD012036 /* AnimatedViewController.swift in Sources */,
+				FDC379CF138BA8D7E726A7B765B931D8 /* Animator.swift in Sources */,
+				C1AAE32F8C8139AB9D7D614B8871F593 /* FrameProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,15 +364,80 @@
 		0A279B27FBC8653CBF773C1291366074 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AHSwipeViewControllerContainer;
-			target = 38A0E44EFEBB92E9424307D96DBA9C1A /* AHSwipeViewControllerContainer */;
+			target = 4A46CD34ADC5D1DCA716CF6BF6F3705B /* AHSwipeViewControllerContainer */;
 			targetProxy = 0335C3E0C857084FB9E8EBBC04664F1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2BD7F31D02AC893C10382DBDC097AEF0 /* Debug */ = {
+		005C645B4E6A3811B81A8BD5A5D88C36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD41E306C3DB5D183648532DB0039F0 /* AHSwipeViewControllerContainer.xcconfig */;
+			baseConfigurationReference = 23B066853B6A407DE4FBD4FCAFF7D334 /* AHSwipeViewControllerContainer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AHSwipeViewControllerContainer/AHSwipeViewControllerContainer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AHSwipeViewControllerContainer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AHSwipeViewControllerContainer/AHSwipeViewControllerContainer.modulemap";
+				PRODUCT_NAME = AHSwipeViewControllerContainer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0EC8AF93CA9AEF34C49190382E9DD829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574374B9CBD413A75A92A4C136173568 /* Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Pods-AHSwipeViewControllerContainer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B0E0E5BF5610FC42E4C863755FA0F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B066853B6A407DE4FBD4FCAFF7D334 /* AHSwipeViewControllerContainer.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -401,9 +466,9 @@
 			};
 			name = Debug;
 		};
-		2ED660C4FFF6029F4D6A6F7F267E65DB /* Release */ = {
+		4C84E514A7BC698234FCD3A6C3D555EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 574374B9CBD413A75A92A4C136173568 /* Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig */;
+			baseConfigurationReference = B51AD1937012B5F2687B1911172A7511 /* Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -414,27 +479,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Pods-AHSwipeViewControllerContainer_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Tests;
+				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -483,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,41 +560,7 @@
 			};
 			name = Debug;
 		};
-		6CEE9C60B14186A11E3220F7FF706892 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C5A053A72AAA8E38AFEFE82BF6EE2E4 /* Pods-AHSwipeViewControllerContainer_Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -574,83 +606,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		846BE28CDC4BABB1DD87D50FB1618EEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD41E306C3DB5D183648532DB0039F0 /* AHSwipeViewControllerContainer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AHSwipeViewControllerContainer/AHSwipeViewControllerContainer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AHSwipeViewControllerContainer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AHSwipeViewControllerContainer/AHSwipeViewControllerContainer.modulemap";
-				PRODUCT_NAME = AHSwipeViewControllerContainer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C18B2624249A9E64052A7B324AE76646 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B51AD1937012B5F2687B1911172A7511 /* Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E3D1B33972E6EB77D0B297D51E32B6A6 /* Debug */ = {
+		BEFAEF513BCF14D6EA5A6FCEBE303674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A33AE237D3040890CA6F5F086424217D /* Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -665,7 +630,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Pods-AHSwipeViewControllerContainer_Tests.modulemap";
@@ -682,14 +647,48 @@
 			};
 			name = Debug;
 		};
+		DFDF1AED79E1B9ABFE9A58D2096F9928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5A053A72AAA8E38AFEFE82BF6EE2E4 /* Pods-AHSwipeViewControllerContainer_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AHSwipeViewControllerContainer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2B32551B477B06843721FF5D7008E1F0 /* Build configuration list for PBXNativeTarget "Pods-AHSwipeViewControllerContainer_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C18B2624249A9E64052A7B324AE76646 /* Debug */,
-				6CEE9C60B14186A11E3220F7FF706892 /* Release */,
+				4C84E514A7BC698234FCD3A6C3D555EF /* Debug */,
+				DFDF1AED79E1B9ABFE9A58D2096F9928 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -697,8 +696,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
-				731DC216E1A58545B559F6E0A2418060 /* Release */,
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -706,17 +705,17 @@
 		B8365CA11CD3535CB625C2E53B16A2CB /* Build configuration list for PBXNativeTarget "Pods-AHSwipeViewControllerContainer_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3D1B33972E6EB77D0B297D51E32B6A6 /* Debug */,
-				2ED660C4FFF6029F4D6A6F7F267E65DB /* Release */,
+				BEFAEF513BCF14D6EA5A6FCEBE303674 /* Debug */,
+				0EC8AF93CA9AEF34C49190382E9DD829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1B86BEE16F452D268FAB244B10BFFB9 /* Build configuration list for PBXNativeTarget "AHSwipeViewControllerContainer" */ = {
+		CC509C54AF7647B77BDA21A6259B9CB1 /* Build configuration list for PBXNativeTarget "AHSwipeViewControllerContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BD7F31D02AC893C10382DBDC097AEF0 /* Debug */,
-				846BE28CDC4BABB1DD87D50FB1618EEB /* Release */,
+				3B0E0E5BF5610FC42E4C863755FA0F97 /* Debug */,
+				005C645B4E6A3811B81A8BD5A5D88C36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

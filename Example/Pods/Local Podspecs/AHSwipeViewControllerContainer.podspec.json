@@ -1,9 +1,9 @@
 {
   "name": "AHSwipeViewControllerContainer",
-  "version": "0.1.0",
-  "summary": "A short description of AHSwipeViewControllerContainer.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/AlexHmelevskiAG/AHSwipeViewControllerContainer",
+  "version": "0.1.1",
+  "summary": "A Snapchat-like ViewController Container AHSwipeViewControllerContainer.",
+  "description": "A Snapchat-like ViewController Container AHSwipeViewControllerContainer.",
+  "homepage": "https://github.com/AlexHmelevski/AHSwipeViewControllerContainer",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "AlexHmelevskiAG": "alexei.hmelevski@gmail.com"
   },
   "source": {
-    "git": "https://github.com/AlexHmelevskiAG/AHSwipeViewControllerContainer.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/AlexHmelevski/AHSwipeViewControllerContainer.git",
+    "tag": "0.1.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "AHSwipeViewControllerContainer/Classes/**/*"
 }
