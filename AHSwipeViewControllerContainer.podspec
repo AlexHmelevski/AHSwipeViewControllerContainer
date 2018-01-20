@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = 'A Snapchat-like ViewController Container AHSwipeViewControllerContainer.'
 
-  s.homepage         = 'https://github.com/AlexHmelevskiAG/AHSwipeViewControllerContainer'
+  s.homepage         = 'https://github.com/AlexHmelevski/AHSwipeViewControllerContainer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'AlexHmelevskiAG' => 'alexei.hmelevski@gmail.com' }
