@@ -1,0 +1,16 @@
+PODS:
+  - AHSwipeViewControllerContainer (0.1.0)
+
+DEPENDENCIES:
+  - AHSwipeViewControllerContainer (from `../`)
+
+EXTERNAL SOURCES:
+  AHSwipeViewControllerContainer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AHSwipeViewControllerContainer: 4bf462e19d11d4549c50b4980087ce4177b705fb
+
+PODFILE CHECKSUM: e9d5f5b7446693a75c78e6858a974550f75b8923
+
+COCOAPODS: 1.4.0.beta.2

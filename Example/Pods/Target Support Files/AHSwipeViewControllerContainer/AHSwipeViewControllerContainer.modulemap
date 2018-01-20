@@ -1,0 +1,6 @@
+framework module AHSwipeViewControllerContainer {
+  umbrella header "AHSwipeViewControllerContainer-umbrella.h"
+
+  export *
+  module * { export * }
+}

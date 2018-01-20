@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AHSwipeViewControllerContainer_Example' do
+  pod 'AHSwipeViewControllerContainer', :path => '../'
+
+  target 'AHSwipeViewControllerContainer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
