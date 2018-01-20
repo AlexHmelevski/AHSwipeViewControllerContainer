@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'A Snapchat-like ViewController Container AHSwipeViewControllerContainer.'
+  s.description      = 'A Snapchat-like ViewController Container AHSwipeViewControllerContainer with interactive animation'
 
   s.homepage         = 'https://github.com/AlexHmelevski/AHSwipeViewControllerContainer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

@@ -11,16 +11,16 @@
 		2E6D319BD320313ABAF23ABB23FEC01F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		38DC43B20436A0B03D75F4ED89E748F8 /* AHSwipeViewControllerContainer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69510BA54824F008715F2B9885CA2C8C /* AHSwipeViewControllerContainer-dummy.m */; };
 		409D8E2CE876D4F527BC707977B5DCD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4A5569824DE85CDBE3C74723FD012036 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */; };
 		825E3BB81860F84F4D06CB2795156947 /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD86C541637B08CDA6BE077781F74B /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		895346F82012F1BE0068B050 /* AHSwipeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F22012F1BE0068B050 /* AHSwipeViewControllerContainer.swift */; };
+		895346F92012F1BE0068B050 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F42012F1BE0068B050 /* Animator.swift */; };
+		895346FA2012F1BE0068B050 /* AHSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F52012F1BE0068B050 /* AHSwipeDirection.swift */; };
+		895346FB2012F1BE0068B050 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F62012F1BE0068B050 /* AnimatedViewController.swift */; };
+		895346FC2012F1BE0068B050 /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F72012F1BE0068B050 /* FrameProvider.swift */; };
 		A14F1F3B411DA258F2FD40479B48F03A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A38D2D3A8182E1DF785AAD176DDEF4F6 /* AHSwipeViewControllerContainer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9EBB37316DA7AF9C071E2FBF05F963 /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4383D8CB158E17B846C0FB2690FCF5AB /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1AAE32F8C8139AB9D7D614B8871F593 /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */; };
-		C8FA2E425A0E627D27B2484926B7376E /* AHSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */; };
-		CED8DFE7A55F22C640E9EF93CDFFC40F /* AHSwipeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */; };
 		FA411EFFF1789EA529441809CDB79FFB /* Pods-AHSwipeViewControllerContainer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB84C3AA1FCBE107CA1BBDF39C576 /* Pods-AHSwipeViewControllerContainer_Example-dummy.m */; };
-		FDC379CF138BA8D7E726A7B765B931D8 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,38 +37,39 @@
 		0A156E67D4A904E4F14546AB93DF234D /* AHSwipeViewControllerContainer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-prefix.pch"; sourceTree = "<group>"; };
 		0F3E4801442B26468F857F7EA24DB50E /* Pods-AHSwipeViewControllerContainer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHSwipeViewControllerContainer_Tests-dummy.m"; sourceTree = "<group>"; };
 		108211BF0A16E123BFA86C6B2FB57F2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = AHSwipeViewControllerContainer/Classes/Animator.swift; sourceTree = "<group>"; };
 		1462ED1665AD3C6EE4041953267C4BA6 /* Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		179B48BE63BA5684A0B4B9FC40573FA0 /* Pods-AHSwipeViewControllerContainer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AHSwipeViewControllerContainer_Example.modulemap"; sourceTree = "<group>"; };
+		179B48BE63BA5684A0B4B9FC40573FA0 /* Pods-AHSwipeViewControllerContainer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AHSwipeViewControllerContainer_Example.modulemap"; sourceTree = "<group>"; };
 		1C8212AF21655CBD1E01456DC621B236 /* Pods-AHSwipeViewControllerContainer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Tests-resources.sh"; sourceTree = "<group>"; };
 		1EFE7ACF10C17447DF62C487B48D27A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A0FA2669D8DDBBB0F5B0B39847824B /* Pods-AHSwipeViewControllerContainer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		23B066853B6A407DE4FBD4FCAFF7D334 /* AHSwipeViewControllerContainer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHSwipeViewControllerContainer.xcconfig; sourceTree = "<group>"; };
 		2C5A053A72AAA8E38AFEFE82BF6EE2E4 /* Pods-AHSwipeViewControllerContainer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2D5766D3A48A07878D98BA68CE1DF62D /* AHSwipeViewControllerContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AHSwipeViewControllerContainer.framework; path = AHSwipeViewControllerContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39EDB65384CC0ECB89C4942D94CDC950 /* Pods_AHSwipeViewControllerContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AHSwipeViewControllerContainer_Example.framework; path = "Pods-AHSwipeViewControllerContainer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5766D3A48A07878D98BA68CE1DF62D /* AHSwipeViewControllerContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AHSwipeViewControllerContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39EDB65384CC0ECB89C4942D94CDC950 /* Pods_AHSwipeViewControllerContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHSwipeViewControllerContainer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHSwipeViewControllerContainer-umbrella.h"; sourceTree = "<group>"; };
 		4383D8CB158E17B846C0FB2690FCF5AB /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHSwipeViewControllerContainer_Tests-umbrella.h"; sourceTree = "<group>"; };
-		45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AHSwipeViewControllerContainer.swift; path = AHSwipeViewControllerContainer/Classes/AHSwipeViewControllerContainer.swift; sourceTree = "<group>"; };
-		5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameProvider.swift; path = AHSwipeViewControllerContainer/Classes/FrameProvider.swift; sourceTree = "<group>"; };
 		574374B9CBD413A75A92A4C136173568 /* Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5FC4D46287F440E9F4FFBA2763487D73 /* Pods-AHSwipeViewControllerContainer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Example-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69510BA54824F008715F2B9885CA2C8C /* AHSwipeViewControllerContainer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHSwipeViewControllerContainer-dummy.m"; sourceTree = "<group>"; };
 		6E99398FF1943F218A95ACB00DAEB7A4 /* Pods-AHSwipeViewControllerContainer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHSwipeViewControllerContainer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		729D1084C3DEEBB7C0FBBCC42779F6A5 /* Pods-AHSwipeViewControllerContainer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHSwipeViewControllerContainer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		762008B7E4946F4AE2CD0326FA31B5FC /* Pods_AHSwipeViewControllerContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AHSwipeViewControllerContainer_Tests.framework; path = "Pods-AHSwipeViewControllerContainer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		762008B7E4946F4AE2CD0326FA31B5FC /* Pods_AHSwipeViewControllerContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHSwipeViewControllerContainer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AD86C541637B08CDA6BE077781F74B /* Pods-AHSwipeViewControllerContainer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHSwipeViewControllerContainer_Example-umbrella.h"; sourceTree = "<group>"; };
 		83651B7237FB38D3AB70C93F210F5522 /* Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHSwipeViewControllerContainer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		895346F22012F1BE0068B050 /* AHSwipeViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHSwipeViewControllerContainer.swift; sourceTree = "<group>"; };
+		895346F32012F1BE0068B050 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		895346F42012F1BE0068B050 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		895346F52012F1BE0068B050 /* AHSwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHSwipeDirection.swift; sourceTree = "<group>"; };
+		895346F62012F1BE0068B050 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
+		895346F72012F1BE0068B050 /* FrameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameProvider.swift; sourceTree = "<group>"; };
 		89E6C3AF92ACEE9F5D85264F36471D09 /* Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedViewController.swift; path = AHSwipeViewControllerContainer/Classes/AnimatedViewController.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A33AE237D3040890CA6F5F086424217D /* Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B51AD1937012B5F2687B1911172A7511 /* Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C0ACCE19E0D20E64EE6BA9B2C3BE13C2 /* AHSwipeViewControllerContainer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AHSwipeViewControllerContainer.modulemap; sourceTree = "<group>"; };
+		C0ACCE19E0D20E64EE6BA9B2C3BE13C2 /* AHSwipeViewControllerContainer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AHSwipeViewControllerContainer.modulemap; sourceTree = "<group>"; };
 		DC2EDD27DFEA5921A99A62186DDCE178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6A7577A8C2ADB0F28FEC289FBCB7E54 /* Pods-AHSwipeViewControllerContainer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AHSwipeViewControllerContainer_Tests.modulemap"; sourceTree = "<group>"; };
-		F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AHSwipeDirection.swift; path = AHSwipeViewControllerContainer/Classes/AHSwipeDirection.swift; sourceTree = "<group>"; };
+		E6A7577A8C2ADB0F28FEC289FBCB7E54 /* Pods-AHSwipeViewControllerContainer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AHSwipeViewControllerContainer_Tests.modulemap"; sourceTree = "<group>"; };
 		FB6FB84C3AA1FCBE107CA1BBDF39C576 /* Pods-AHSwipeViewControllerContainer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHSwipeViewControllerContainer_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,11 +132,7 @@
 		77486D8E3580456FDEF8A4EE09972501 /* AHSwipeViewControllerContainer */ = {
 			isa = PBXGroup;
 			children = (
-				F5A6A597C49F67A089A1A7C1F8EF454D /* AHSwipeDirection.swift */,
-				45F79535B8B6D8AE44F311458738C541 /* AHSwipeViewControllerContainer.swift */,
-				980BDF49D4EDC2DBAB167BDBB4214397 /* AnimatedViewController.swift */,
-				11917A2A197BB7D133A1B172A52BACB7 /* Animator.swift */,
-				5242478103B6C180F49CBEE879FA4B02 /* FrameProvider.swift */,
+				895346F12012F1BE0068B050 /* Classes */,
 				A5F3DE54B44ED2912F5A599CFD768357 /* Support Files */,
 			);
 			name = AHSwipeViewControllerContainer;
@@ -159,6 +156,20 @@
 				77486D8E3580456FDEF8A4EE09972501 /* AHSwipeViewControllerContainer */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		895346F12012F1BE0068B050 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				895346F22012F1BE0068B050 /* AHSwipeViewControllerContainer.swift */,
+				895346F32012F1BE0068B050 /* .gitkeep */,
+				895346F42012F1BE0068B050 /* Animator.swift */,
+				895346F52012F1BE0068B050 /* AHSwipeDirection.swift */,
+				895346F62012F1BE0068B050 /* AnimatedViewController.swift */,
+				895346F72012F1BE0068B050 /* FrameProvider.swift */,
+			);
+			name = Classes;
+			path = AHSwipeViewControllerContainer/Classes;
 			sourceTree = "<group>";
 		};
 		98D664C41C3D6BF50DEEB351E03716A5 /* Targets Support Files */ = {
@@ -349,12 +360,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FA2E425A0E627D27B2484926B7376E /* AHSwipeDirection.swift in Sources */,
+				895346F92012F1BE0068B050 /* Animator.swift in Sources */,
+				895346F82012F1BE0068B050 /* AHSwipeViewControllerContainer.swift in Sources */,
+				895346FB2012F1BE0068B050 /* AnimatedViewController.swift in Sources */,
 				38DC43B20436A0B03D75F4ED89E748F8 /* AHSwipeViewControllerContainer-dummy.m in Sources */,
-				CED8DFE7A55F22C640E9EF93CDFFC40F /* AHSwipeViewControllerContainer.swift in Sources */,
-				4A5569824DE85CDBE3C74723FD012036 /* AnimatedViewController.swift in Sources */,
-				FDC379CF138BA8D7E726A7B765B931D8 /* Animator.swift in Sources */,
-				C1AAE32F8C8139AB9D7D614B8871F593 /* FrameProvider.swift in Sources */,
+				895346FC2012F1BE0068B050 /* FrameProvider.swift in Sources */,
+				895346FA2012F1BE0068B050 /* AHSwipeDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
