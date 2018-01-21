@@ -54,6 +54,12 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public override var childViewControllerForStatusBarStyle: UIViewController? { return currentVC }
+    public override var childViewControllerForStatusBarHidden: UIViewController? { return currentVC }
+    public override func childViewControllerForHomeIndicatorAutoHidden() -> UIViewController? { return currentVC }
+    public override func childViewControllerForScreenEdgesDeferringSystemGestures() -> UIViewController? { return currentVC }
+    
+    
     @objc func handleGesture(gestureRecognizer: UIPanGestureRecognizer) {
         
         let vel =  gestureRecognizer.velocity(in: view)
@@ -131,14 +137,14 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         
         let context = self.context(for: .left, newState: newState, vc: vc)
         
-        
         addNavigation(for: vc)
         addBackground(for: vc)
-        view.addSubview(vc.view)
-        
+        prepareForShow(vc: vc)
         animateChanges(for: vc.view, with: context, completed: {
             self.state = newState
+            self.finalizeShow(vc: vc, cancel: false)
         }) {
+            self.finalizeShow(vc: vc, cancel: true)
             self.removeNavigation(for: vc)
             self.removeBackground(for: vc)
             vc.view.removeFromSuperview()
@@ -153,16 +159,19 @@ public final class AHSwipeViewControllerContainer: UIViewController {
                       with newState: ContainerState) {
         
         let context = self.context(for: .right, newState: .root, vc: vc)
-       
 
+        prepareForHide(vc: vc)
         animateChanges(for: vc.view, with: context, completed: {
             self.state = newState
+            self.finilizeHide(vc: vc, cancel: false)
             vc.view.removeFromSuperview()
             self.removeNavigation(for: vc)
             self.removeBackground(for: vc)
+            
         }) {
             self.addNavigation(for: vc)
             self.addBackground(for: vc)
+            self.finilizeHide(vc: vc, cancel: true)
             vc.view.frame = self.frameProvider.initialFrame(forContext: context)
         }
         
@@ -192,6 +201,27 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         v.removeFromSuperview()
     }
     
+    private func prepareForShow(vc: UIViewController) {
+        view.addSubview(vc.view)
+        addChildViewController(vc)
+        rootVC.willMove(toParentViewController: nil)
+    }
+    
+    private func prepareForHide(vc: UIViewController) {
+        vc.willMove(toParentViewController: nil)
+        rootVC.willMove(toParentViewController: self)
+    }
+    
+    private func finalizeShow(vc: UIViewController, cancel: Bool) {
+        vc.didMove(toParentViewController: cancel ? nil : self)
+        rootVC.didMove(toParentViewController: cancel ? self : nil)
+    }
+    
+    private func finilizeHide(vc: UIViewController, cancel: Bool) {
+        rootVC.didMove(toParentViewController: cancel ? nil : self)
+        vc.didMove(toParentViewController: cancel ? self : nil)
+    }
+    
     private func context(for direction: HorizontalDirection,
                          newState: ContainerState,
                          vc: SwipeChildViewController) -> Context {
@@ -215,5 +245,13 @@ public final class AHSwipeViewControllerContainer: UIViewController {
          animator?.completed = completed
     }
     
-
+    
+    private var currentVC: SwipeChildViewController? {
+        switch state {
+            case .left: return leftVC
+            case .right: return rightVC
+            case .root: return rootVC
+        default: return nil
+        }
+    }
 }
