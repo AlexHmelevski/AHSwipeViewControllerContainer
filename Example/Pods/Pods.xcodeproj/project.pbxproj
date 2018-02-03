@@ -16,7 +16,9 @@
 		895346F92012F1BE0068B050 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F42012F1BE0068B050 /* Animator.swift */; };
 		895346FA2012F1BE0068B050 /* AHSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F52012F1BE0068B050 /* AHSwipeDirection.swift */; };
 		895346FB2012F1BE0068B050 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F62012F1BE0068B050 /* AnimatedViewController.swift */; };
-		895346FC2012F1BE0068B050 /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F72012F1BE0068B050 /* FrameProvider.swift */; };
+		895346FC2012F1BE0068B050 /* AHFrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895346F72012F1BE0068B050 /* AHFrameProvider.swift */; };
+		89DC168920253DD100720362 /* PercentCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC168820253DD100720362 /* PercentCalculator.swift */; };
+		89DC168D202553EF00720362 /* ALAlphaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC168C202553EF00720362 /* ALAlphaProvider.swift */; };
 		A14F1F3B411DA258F2FD40479B48F03A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A38D2D3A8182E1DF785AAD176DDEF4F6 /* AHSwipeViewControllerContainer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EDEE3CFDB4BB10410C223623B2D432 /* AHSwipeViewControllerContainer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9EBB37316DA7AF9C071E2FBF05F963 /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4383D8CB158E17B846C0FB2690FCF5AB /* Pods-AHSwipeViewControllerContainer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,7 +64,9 @@
 		895346F42012F1BE0068B050 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		895346F52012F1BE0068B050 /* AHSwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHSwipeDirection.swift; sourceTree = "<group>"; };
 		895346F62012F1BE0068B050 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
-		895346F72012F1BE0068B050 /* FrameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameProvider.swift; sourceTree = "<group>"; };
+		895346F72012F1BE0068B050 /* AHFrameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHFrameProvider.swift; sourceTree = "<group>"; };
+		89DC168820253DD100720362 /* PercentCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentCalculator.swift; sourceTree = "<group>"; };
+		89DC168C202553EF00720362 /* ALAlphaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALAlphaProvider.swift; sourceTree = "<group>"; };
 		89E6C3AF92ACEE9F5D85264F36471D09 /* Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHSwipeViewControllerContainer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A33AE237D3040890CA6F5F086424217D /* Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +170,9 @@
 				895346F42012F1BE0068B050 /* Animator.swift */,
 				895346F52012F1BE0068B050 /* AHSwipeDirection.swift */,
 				895346F62012F1BE0068B050 /* AnimatedViewController.swift */,
-				895346F72012F1BE0068B050 /* FrameProvider.swift */,
+				895346F72012F1BE0068B050 /* AHFrameProvider.swift */,
+				89DC168820253DD100720362 /* PercentCalculator.swift */,
+				89DC168C202553EF00720362 /* ALAlphaProvider.swift */,
 			);
 			name = Classes;
 			path = AHSwipeViewControllerContainer/Classes;
@@ -363,8 +369,10 @@
 				895346F92012F1BE0068B050 /* Animator.swift in Sources */,
 				895346F82012F1BE0068B050 /* AHSwipeViewControllerContainer.swift in Sources */,
 				895346FB2012F1BE0068B050 /* AnimatedViewController.swift in Sources */,
+				89DC168920253DD100720362 /* PercentCalculator.swift in Sources */,
 				38DC43B20436A0B03D75F4ED89E748F8 /* AHSwipeViewControllerContainer-dummy.m in Sources */,
-				895346FC2012F1BE0068B050 /* FrameProvider.swift in Sources */,
+				895346FC2012F1BE0068B050 /* AHFrameProvider.swift in Sources */,
+				89DC168D202553EF00720362 /* ALAlphaProvider.swift in Sources */,
 				895346FA2012F1BE0068B050 /* AHSwipeDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

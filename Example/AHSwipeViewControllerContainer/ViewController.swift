@@ -121,6 +121,9 @@ class ViewController: UIViewController {
         let vc = RootViewController()
         vc.view.backgroundColor = .red
         let container = AHSwipeViewControllerContainer(rootVC: vc)
+        container.bottomVC = SWViewController()
+        container.leftVC = SWViewController()
+        container.upperVC = SWViewController()
         container.rightVC = SWViewController()
         self.present(container, animated: true, completion: nil)
     }

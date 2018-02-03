@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-struct Context {
-    let direction: HorizontalDirection
+public struct Context {
+//    let direction: Direction
     let to: ContainerState
     let from: ContainerState
     let contentSize: CGSize

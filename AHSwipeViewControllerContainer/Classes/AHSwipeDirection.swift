@@ -9,12 +9,20 @@
 import Foundation
 import UIKit
 
-struct AHSwipeDirection {
-    let horizontal: HorizontalDirection
-    let vertical: VerticalDirection
+public struct AHSwipeDirection {
+    let direction: Direction
+
     
     init(velocity: CGPoint) {
-        horizontal = velocity.x > 0 ? .right : .left
-        vertical = velocity.y < 0 ? .up : .down
+        
+        let isVertical = fabs(velocity.y) > fabs(velocity.x)
+    
+        
+        if isVertical {
+            direction = velocity.y < 0 ? .up : .down
+        } else {
+            direction = velocity.x > 0 ? .right : .left
+            
+        }
     }
 }

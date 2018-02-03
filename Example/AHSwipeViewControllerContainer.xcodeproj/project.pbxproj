@@ -12,8 +12,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* AHSwipeDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* AHSwipeDirectionTests.swift */; };
 		7D442B8727CB80760D12F4D3 /* Pods_AHSwipeViewControllerContainer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9196961955E408FE7A46F6 /* Pods_AHSwipeViewControllerContainer_Example.framework */; };
+		89DC16872024DA2200720362 /* FrameProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC16862024DA2200720362 /* FrameProviderTests.swift */; };
+		89DC168B2025474A00720362 /* PercentCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC168A2025474A00720362 /* PercentCalculatorTests.swift */; };
 		AE052DD06914E51655074DEB /* Pods_AHSwipeViewControllerContainer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE5229DB6DDE804EFD9F677 /* Pods_AHSwipeViewControllerContainer_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +42,11 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* AHSwipeViewControllerContainer_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHSwipeViewControllerContainer_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* AHSwipeDirectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHSwipeDirectionTests.swift; sourceTree = "<group>"; };
 		6EE5229DB6DDE804EFD9F677 /* Pods_AHSwipeViewControllerContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHSwipeViewControllerContainer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BF85268BC453C1E7EEEF9F /* Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		89DC16862024DA2200720362 /* FrameProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameProviderTests.swift; sourceTree = "<group>"; };
+		89DC168A2025474A00720362 /* PercentCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentCalculatorTests.swift; sourceTree = "<group>"; };
 		94DF4B3C17EFCAD43E335214 /* Pods-AHSwipeViewControllerContainer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHSwipeViewControllerContainer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AHSwipeViewControllerContainer_Example/Pods-AHSwipeViewControllerContainer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D632780FA076210199D00BFA /* Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Pods-AHSwipeViewControllerContainer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E771864CBAF29CAD2EB288CA /* Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AHSwipeViewControllerContainer_Tests/Pods-AHSwipeViewControllerContainer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +119,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* AHSwipeDirectionTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				89DC16862024DA2200720362 /* FrameProviderTests.swift */,
+				89DC168A2025474A00720362 /* PercentCalculatorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -379,7 +385,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				89DC168B2025474A00720362 /* PercentCalculatorTests.swift in Sources */,
+				89DC16872024DA2200720362 /* FrameProviderTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* AHSwipeDirectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +570,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AHSwipeViewControllerContainer_Example.app/AHSwipeViewControllerContainer_Example";
 			};
 			name = Debug;
 		};
@@ -579,6 +588,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AHSwipeViewControllerContainer_Example.app/AHSwipeViewControllerContainer_Example";
 			};
 			name = Release;
 		};

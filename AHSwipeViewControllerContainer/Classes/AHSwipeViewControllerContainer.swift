@@ -9,9 +9,22 @@
 import Foundation
 import UIKit
 
-enum HorizontalDirection {
+public enum Direction {
     case left
     case right
+    case up
+    case down
+    
+    public init(velocity: CGPoint) {
+        
+        let isVertical = fabs(velocity.y) > fabs(velocity.x)
+        if isVertical {
+            self = velocity.y < 0 ? .up : .down
+        } else {
+            self = velocity.x > 0 ? .right : .left
+            
+        }
+    }
 }
 
 enum VerticalDirection {
@@ -19,9 +32,11 @@ enum VerticalDirection {
     case down
 }
 
-enum ContainerState {
+public enum ContainerState {
     case left
     case right
+    case top
+    case bottom
     case root
     case inProgress
 }
@@ -31,15 +46,31 @@ public final class AHSwipeViewControllerContainer: UIViewController {
 
     public var rightVC: SwipeChildViewController?
     public var leftVC: SwipeChildViewController?
+    public var upperVC: SwipeChildViewController?
+    public var bottomVC: SwipeChildViewController?
 
     private let rootVC: SwipeChildViewController
-    private var animator: Animator?
+    
+    // MARK: States
+    
     private var state: ContainerState = .root
     private var startPoint: CGPoint = .zero
-    private var frameProvider: FrameProvider = FrameProvider()
+    private var lockedDirection: Direction = Direction(velocity: .zero)
     
-    public init(rootVC: SwipeChildViewController) {
+    private var animator: Animator?
+ 
+    private let frameProvider: FrameProvider
+    private let percentCalculator: PercentCalculator
+    private let alphaProvider: AlphaProvider
+    
+    public init(rootVC: SwipeChildViewController,
+                frameProvider: FrameProvider = AHFrameProvider(),
+                calculator: PercentCalculator  = AHPercentCalculator(),
+                alphaProvider: AlphaProvider = AHAlphaProvider()) {
         self.rootVC = rootVC
+        self.frameProvider = frameProvider
+        self.percentCalculator = calculator
+        self.alphaProvider = alphaProvider
         super.init(nibName: nil, bundle: nil)
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handleGesture(gestureRecognizer:)))
         view.addGestureRecognizer(panGesture)
@@ -63,30 +94,27 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     @objc func handleGesture(gestureRecognizer: UIPanGestureRecognizer) {
         
         let vel =  gestureRecognizer.velocity(in: view)
-        let direction = AHSwipeDirection(velocity: vel)
-        
-      
         let point = gestureRecognizer.location(in: view)
-        let width = view.bounds.size.width
-        let delta = width - startPoint.x
+ 
+        let context = PercentCalculatorContext(direction: lockedDirection,
+                                               currentPoint: point,
+                                               startPoint: startPoint,
+                                               contextFrame: view.frame)
         
         switch gestureRecognizer.state {
 
             case .began:
-       
+                lockedDirection = Direction(velocity: vel)
                 startPoint = point
-                if let vc = controllerForAnimation(using: direction) {
-                    prepareController(for: direction, and: state, using: vc)
+                if let vc = controllerForAnimation(using: lockedDirection) {
+                    prepareController(for: lockedDirection, and: state, using: vc)
                 }
             
-            
             case .changed:
-                let per = percent(for: direction, point: point,initDelta: delta)
-                animator?.set(completionPercentage: per)
-            
+                animator?.set(completionPercentage: percentCalculator.percent(for: context))
             case .ended:
 
-                if percent(for: direction, point: point,initDelta: delta) < 0.3 {
+                if percentCalculator.percent(for: context) < 0.3 {
                     animator?.cancel()
                 } else {
                     animator?.continueAnimation()
@@ -94,48 +122,41 @@ public final class AHSwipeViewControllerContainer: UIViewController {
    
                 startPoint = .zero
 
-            
             case .cancelled: debugPrint("cancelled")
-            
             case .failed: debugPrint("failed")
-
             case .possible: break
             
         }
     }
     
-    private func controllerForAnimation(using direction: AHSwipeDirection)-> SwipeChildViewController? {
-        switch (direction.horizontal,state) {
-            case (.left,.root): return rightVC
-            case (.right,.root): return leftVC
-            case (.right,.right): return rightVC
-            case (.left,.left): return leftVC
+    private func controllerForAnimation(using direction: Direction)-> SwipeChildViewController? {
+        switch (direction,state) {
+            case (.left,.root),(.right,.right): return rightVC
+            case (.right,.root),(.left,.left): return leftVC
+            case (.up,.root),(.down, .bottom): return bottomVC
+            case (.down, .root), (.up,.top): return upperVC
         default: return nil
         }
     }
     
-    private func prepareController(for direction: AHSwipeDirection, and state: ContainerState, using controller: SwipeChildViewController) {
-        switch (direction.horizontal,state) {
+    private func prepareController(for direction: Direction, and state: ContainerState, using controller: SwipeChildViewController) {
+        switch (direction,state) {
             case (.left,.root): show(vc: controller, with: .right)
             case (.right,.root): show(vc: controller, with: .left)
             case (.right,.right): hide(vc: controller, with: .root)
             case (.left,.left): hide(vc: controller, with: .root)
+            case (.up, .root): show(vc: controller, with: .bottom)
+            case (.down, .bottom): hide(vc: controller, with: .root)
+            case (.down, .root): show(vc: controller, with: .top)
+            case (.up, .top): hide(vc: controller, with: .root)
         default: break
         }
-    }
-    
-    
-    private func percent(for direction: AHSwipeDirection,
-                         point: CGPoint,
-                         initDelta: CGFloat) -> CGFloat {
-         return abs((view.bounds.size.width - point.x - initDelta) / (view.bounds.size.width))
-
     }
     
     private func show(vc: SwipeChildViewController,
                       with newState: ContainerState) {
         
-        let context = self.context(for: .left, newState: newState, vc: vc)
+        let context = self.context(for: lockedDirection, newState: newState, vc: vc)
         
         addNavigation(for: vc)
         addBackground(for: vc)
@@ -158,7 +179,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     private func hide(vc: SwipeChildViewController,
                       with newState: ContainerState) {
         
-        let context = self.context(for: .right, newState: .root, vc: vc)
+        let context = self.context(for: lockedDirection, newState: .root, vc: vc)
 
         prepareForHide(vc: vc)
         animateChanges(for: vc.view, with: context, completed: {
@@ -222,12 +243,11 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         vc.didMove(toParentViewController: cancel ? self : nil)
     }
     
-    private func context(for direction: HorizontalDirection,
+    private func context(for direction: Direction,
                          newState: ContainerState,
                          vc: SwipeChildViewController) -> Context {
         
-        return Context(direction: direction,
-                       to: newState,
+        return Context(to: newState,
                        from: state,
                        contentSize: view.frame.size,
                        sizeOffsetMultiplier: vc.navigationView != nil ? 0.9 : 1)
@@ -239,8 +259,11 @@ public final class AHSwipeViewControllerContainer: UIViewController {
                                 canceled: (()->Void)?) {
         let initFrame = frameProvider.initialFrame(forContext: context)
         let finalFrame = frameProvider.finalFrame(forContext: context)
-       
+        view.alpha = self.alphaProvider.initialAlpha(forContext: context)
          animator = Animator(view: view, initFrame: initFrame, finalFrame: finalFrame)
+         animator?.addAnimation {
+            view.alpha = self.alphaProvider.finalAlpha(forContext: context)
+         }
          animator?.cancelCompletion = canceled
          animator?.completed = completed
     }
