@@ -40,16 +40,21 @@ final class Animator {
     }
     
     
-    func start() {
+    func startInteractive() {
         animator.startAnimation()
         animator.pauseAnimation()
     }
     
+    
+    func startAutomatic() {
+        animator.startAnimation()
+    }
+    
     private func callCompletions(for postition: UIViewAnimatingPosition) {
         switch postition {
-        case .end: completed?()
-        case .start: cancelCompletion?()
-        case .current: break
+            case .end: completed?()
+            case .start: cancelCompletion?()
+            case .current: break
         }
     }
     

@@ -81,6 +81,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     
     }
     
+    
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -113,8 +114,9 @@ public final class AHSwipeViewControllerContainer: UIViewController {
             case .changed:
                 animator?.set(completionPercentage: percentCalculator.percent(for: context))
             case .ended:
-
-                if percentCalculator.percent(for: context) < 0.3 {
+                let endContext = context.withNewPoint(currentPoint: CGPoint(x: point.x + vel.x, y: point.y + vel.y))
+                
+                if percentCalculator.percent(for: endContext) < 0.3 {
                     animator?.cancel()
                 } else {
                     animator?.continueAnimation()
@@ -151,7 +153,11 @@ public final class AHSwipeViewControllerContainer: UIViewController {
             case (.up, .top): hide(vc: controller, with: .root)
         default: break
         }
+        
+        animator?.startInteractive()
     }
+    
+    
     
     private func show(vc: SwipeChildViewController,
                       with newState: ContainerState) {
@@ -161,7 +167,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         addNavigation(for: vc)
         addBackground(for: vc)
         prepareForShow(vc: vc)
-        animateChanges(for: vc.view, with: context, completed: {
+        prepareAnimator(for: vc.view, with: context, completed: {
             self.state = newState
             self.finalizeShow(vc: vc, cancel: false)
         }) {
@@ -173,7 +179,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         }
         
         animator?.addAnimation({ vc.alonsideAppearingAnimation?() })
-        animator?.start()
+        animator?.startInteractive()
     }
     
     private func hide(vc: SwipeChildViewController,
@@ -182,7 +188,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         let context = self.context(for: lockedDirection, newState: .root, vc: vc)
 
         prepareForHide(vc: vc)
-        animateChanges(for: vc.view, with: context, completed: {
+        prepareAnimator(for: vc.view, with: context, completed: {
             self.state = newState
             self.finilizeHide(vc: vc, cancel: false)
             vc.view.removeFromSuperview()
@@ -197,7 +203,6 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         }
         
         animator?.addAnimation({ vc.alonsideDisappearingAnimation?() })
-        animator?.start()
     }
     
     private func addNavigation(for vc: SwipeChildViewController) {
@@ -253,7 +258,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
                        sizeOffsetMultiplier: vc.navigationView != nil ? 0.9 : 1)
     }
     
-    private func animateChanges(for view: UIView,
+    private func prepareAnimator(for view: UIView,
                                 with context: Context,
                                 completed: (()->Void)?,
                                 canceled: (()->Void)?) {

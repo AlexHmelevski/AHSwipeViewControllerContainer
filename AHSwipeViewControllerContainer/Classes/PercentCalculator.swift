@@ -13,6 +13,13 @@ public struct PercentCalculatorContext {
     let currentPoint: CGPoint
     let startPoint: CGPoint
     let contextFrame: CGRect
+    
+    func withNewPoint(currentPoint: CGPoint) -> PercentCalculatorContext {
+        return PercentCalculatorContext(direction: direction,
+                                        currentPoint: currentPoint,
+                                        startPoint: startPoint,
+                                        contextFrame: contextFrame)
+    }
 }
 
 public protocol PercentCalculator {
@@ -27,7 +34,6 @@ public final class AHPercentCalculator: PercentCalculator {
     public func percent(for context: PercentCalculatorContext) -> CGFloat {
         let delta =  self.delta(for: context.direction, size: context.contextFrame.size, startPoint: context.startPoint)
         return percent(for: context.currentPoint, with: delta, using: context.direction, contextSize: context.contextFrame.size)
-        
     }
     
     private func delta(for direction: Direction, size: CGSize, startPoint: CGPoint) -> CGFloat {
