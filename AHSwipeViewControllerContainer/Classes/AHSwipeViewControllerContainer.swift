@@ -43,12 +43,12 @@ public enum ContainerState {
 
 
 public final class AHSwipeViewControllerContainer: UIViewController {
-
+    
     public var rightVC: SwipeChildViewController?
     public var leftVC: SwipeChildViewController?
     public var upperVC: SwipeChildViewController?
     public var bottomVC: SwipeChildViewController?
-
+    
     private let rootVC: SwipeChildViewController
     
     // MARK: States
@@ -58,7 +58,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     private var lockedDirection: Direction = Direction(velocity: .zero)
     
     private var animator: Animator?
- 
+    
     private let frameProvider: FrameProvider
     private let percentCalculator: PercentCalculator
     private let alphaProvider: AlphaProvider
@@ -78,7 +78,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         addNavigation(for: rootVC)
         addBackground(for: rootVC)
         view.addSubview(rootVC.view)
-    
+        
     }
     
     
@@ -96,61 +96,61 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         
         let vel =  gestureRecognizer.velocity(in: view)
         let point = gestureRecognizer.location(in: view)
- 
+        
         let context = PercentCalculatorContext(direction: lockedDirection,
                                                currentPoint: point,
                                                startPoint: startPoint,
                                                contextFrame: view.frame)
         
         switch gestureRecognizer.state {
-
-            case .began:
-                lockedDirection = Direction(velocity: vel)
-                startPoint = point
-                if let vc = controllerForAnimation(using: lockedDirection) {
-                    prepareController(for: lockedDirection, and: state, using: vc)
-                }
             
-            case .changed:
-                animator?.set(completionPercentage: percentCalculator.percent(for: context))
-            case .ended:
-                let endContext = context.withNewPoint(currentPoint: CGPoint(x: point.x + vel.x, y: point.y + vel.y))
-                
-                if percentCalculator.percent(for: endContext) < 0.3 {
-                    animator?.cancel()
-                } else {
-                    animator?.continueAnimation()
-                }
-   
-                startPoint = .zero
-
-            case .cancelled: debugPrint("cancelled")
-            case .failed: debugPrint("failed")
-            case .possible: break
+        case .began:
+            lockedDirection = Direction(velocity: vel)
+            startPoint = point
+            if let vc = controllerForAnimation(using: lockedDirection) {
+                prepareController(for: lockedDirection, and: state, using: vc)
+            }
+            
+        case .changed:
+            animator?.set(completionPercentage: percentCalculator.percent(for: context))
+        case .ended:
+            let endContext = context.withNewPoint(currentPoint: CGPoint(x: point.x + vel.x, y: point.y + vel.y))
+            
+            if percentCalculator.percent(for: endContext) < 0.3 {
+                animator?.cancel()
+            } else {
+                animator?.continueAnimation()
+            }
+            
+            startPoint = .zero
+            
+        case .cancelled: debugPrint("cancelled")
+        case .failed: debugPrint("failed")
+        case .possible: break
             
         }
     }
     
     private func controllerForAnimation(using direction: Direction)-> SwipeChildViewController? {
         switch (direction,state) {
-            case (.left,.root),(.right,.right): return rightVC
-            case (.right,.root),(.left,.left): return leftVC
-            case (.up,.root),(.down, .bottom): return bottomVC
-            case (.down, .root), (.up,.top): return upperVC
+        case (.left,.root),(.right,.right): return rightVC
+        case (.right,.root),(.left,.left): return leftVC
+        case (.up,.root),(.down, .bottom): return bottomVC
+        case (.down, .root), (.up,.top): return upperVC
         default: return nil
         }
     }
     
     private func prepareController(for direction: Direction, and state: ContainerState, using controller: SwipeChildViewController) {
         switch (direction,state) {
-            case (.left,.root): show(vc: controller, with: .right)
-            case (.right,.root): show(vc: controller, with: .left)
-            case (.right,.right): hide(vc: controller, with: .root)
-            case (.left,.left): hide(vc: controller, with: .root)
-            case (.up, .root): show(vc: controller, with: .bottom)
-            case (.down, .bottom): hide(vc: controller, with: .root)
-            case (.down, .root): show(vc: controller, with: .top)
-            case (.up, .top): hide(vc: controller, with: .root)
+        case (.left,.root): show(vc: controller, with: .right)
+        case (.right,.root): show(vc: controller, with: .left)
+        case (.right,.right): hide(vc: controller, with: .root)
+        case (.left,.left): hide(vc: controller, with: .root)
+        case (.up, .root): show(vc: controller, with: .bottom)
+        case (.down, .bottom): hide(vc: controller, with: .root)
+        case (.down, .root): show(vc: controller, with: .top)
+        case (.up, .top): hide(vc: controller, with: .root)
         default: break
         }
         
@@ -178,7 +178,10 @@ public final class AHSwipeViewControllerContainer: UIViewController {
             vc.view.frame = self.frameProvider.initialFrame(forContext: context)
         }
         
-        animator?.addAnimation({ vc.alonsideAppearingAnimation?() })
+        animator?.addAnimation({
+            vc.alonsideAppearingAnimation?()
+            self.controller(for: self.state)?.alonsideDisappearingAnimation?()
+        })
         animator?.startInteractive()
     }
     
@@ -186,7 +189,7 @@ public final class AHSwipeViewControllerContainer: UIViewController {
                       with newState: ContainerState) {
         
         let context = self.context(for: lockedDirection, newState: .root, vc: vc)
-
+        
         prepareForHide(vc: vc)
         prepareAnimator(for: vc.view, with: context, completed: {
             self.state = newState
@@ -202,7 +205,11 @@ public final class AHSwipeViewControllerContainer: UIViewController {
             vc.view.frame = self.frameProvider.initialFrame(forContext: context)
         }
         
-        animator?.addAnimation({ vc.alonsideDisappearingAnimation?() })
+        animator?.addAnimation({
+            vc.alonsideDisappearingAnimation?()
+            self.controller(for: newState)?.alonsideAppearingAnimation?()
+        })
+        
     }
     
     private func addNavigation(for vc: SwipeChildViewController) {
@@ -259,27 +266,34 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     }
     
     private func prepareAnimator(for view: UIView,
-                                with context: Context,
-                                completed: (()->Void)?,
-                                canceled: (()->Void)?) {
+                                 with context: Context,
+                                 completed: (()->Void)?,
+                                 canceled: (()->Void)?) {
         let initFrame = frameProvider.initialFrame(forContext: context)
         let finalFrame = frameProvider.finalFrame(forContext: context)
         view.alpha = self.alphaProvider.initialAlpha(forContext: context)
-         animator = Animator(view: view, initFrame: initFrame, finalFrame: finalFrame)
-         animator?.addAnimation {
+        animator = Animator(view: view, initFrame: initFrame, finalFrame: finalFrame)
+        animator?.addAnimation {
             view.alpha = self.alphaProvider.finalAlpha(forContext: context)
-         }
-         animator?.cancelCompletion = canceled
-         animator?.completed = completed
+        }
+        animator?.cancelCompletion = canceled
+        animator?.completed = completed
     }
     
     
-    private var currentVC: SwipeChildViewController? {
+    private func controller(for state: ContainerState) -> SwipeChildViewController? {
         switch state {
-            case .left: return leftVC
-            case .right: return rightVC
-            case .root: return rootVC
+        case .left: return leftVC
+        case .right: return rightVC
+        case .root: return rootVC
+        case .bottom: return bottomVC
+        case .top: return upperVC
         default: return nil
         }
     }
+    
+    private var currentVC: SwipeChildViewController? {
+        return controller(for: state)
+    }
 }
+

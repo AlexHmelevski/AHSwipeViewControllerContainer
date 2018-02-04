@@ -87,7 +87,7 @@ class FrameProviderTests: XCTestCase {
     func test_frames_for_swipe_to_top_from_root() {
         let context = defaultContext(to: .top, from: .root)
         let expected = CGRect(x: 0,
-                              y: defaultSize.height ,
+                              y: yOffset ,
                               width: defaultSize.width,
                               height: defaultSize.height - yOffset)
         
