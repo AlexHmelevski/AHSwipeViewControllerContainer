@@ -12,8 +12,11 @@ import AHSwipeViewControllerContainer
 class SWViewController: UIViewController, AnimatedViewController {
     var backgroundView: UIView? = UIView()
     
-    var navigationView: UIView? = UIView()
-    
+    var navigationView: UIView?  {
+        return btn
+    }
+    var didTapClosure: ( ()->Void )?
+    var btn = UIButton(type: .infoDark)
     var alonsideAppearingAnimation: AnimationBlock? {
         return {
             self.navigationView?.alpha = 1
@@ -36,6 +39,11 @@ class SWViewController: UIViewController, AnimatedViewController {
         backgroundView?.alpha = 0
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
+        btn.addTarget(self, action: #selector(didTap), for: .touchUpInside)
+    }
+    
+    @objc func didTap() {
+        didTapClosure?()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +67,7 @@ class SWViewController: UIViewController, AnimatedViewController {
 class RootViewController: UIViewController, AnimatedViewController {
     var backgroundView: UIView? = UIView()
     
-    var navigationView: UIView? = UIView()
+    var navigationView: UIView? = UIButton(type: .infoDark)
     
     var alonsideAppearingAnimation: AnimationBlock? {
         return {
@@ -74,6 +82,8 @@ class RootViewController: UIViewController, AnimatedViewController {
             self.backgroundView?.alpha = 0
         }
     }
+    
+    var didTapClosure: ( ()->Void )?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -100,6 +110,8 @@ class RootViewController: UIViewController, AnimatedViewController {
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
     }
+    
+
 }
 
 
@@ -121,10 +133,41 @@ class ViewController: UIViewController {
         let vc = RootViewController()
         vc.view.backgroundColor = .red
         let container = AHSwipeViewControllerContainer(rootVC: vc)
-        container.bottomVC = SWViewController()
-        container.leftVC = SWViewController()
-        container.upperVC = SWViewController()
-        container.rightVC = SWViewController()
+        vc.didTapClosure = {
+            container.chande(to: .root)
+        }
+        let upVC = SWViewController()
+        
+        upVC.didTapClosure = {
+           container.chande(to: .root)
+        }
+        
+        container.upperVC = upVC
+        
+        
+        let btVC = SWViewController()
+        
+        btVC.didTapClosure = {
+            container.chande(to: .root)
+        }
+        
+        container.bottomVC = btVC
+        
+        let lVC = SWViewController()
+        
+        lVC.didTapClosure = {
+            container.chande(to: .root)
+        }
+        
+        container.leftVC = lVC
+        
+        let rVC = SWViewController()
+        
+        rVC.didTapClosure = {
+            container.chande(to: .root)
+        }
+       
+        container.rightVC = rVC
         self.present(container, animated: true, completion: nil)
     }
 }

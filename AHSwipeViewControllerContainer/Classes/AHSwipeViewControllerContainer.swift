@@ -92,6 +92,19 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     public override func childViewControllerForScreenEdgesDeferringSystemGestures() -> UIViewController? { return currentVC }
     
     
+    public func chande(to newState: ContainerState) {
+        switch (state, newState) {
+        case (_ ,.root):
+            if let currentVC = currentVC {
+                hide(vc: currentVC, with: newState)
+            }
+            
+        default: break
+        }
+        animator?.startAutomatic()
+    }
+    
+    
     @objc func handleGesture(gestureRecognizer: UIPanGestureRecognizer) {
         
         let vel =  gestureRecognizer.velocity(in: view)
@@ -141,7 +154,9 @@ public final class AHSwipeViewControllerContainer: UIViewController {
         }
     }
     
-    private func prepareController(for direction: Direction, and state: ContainerState, using controller: SwipeChildViewController) {
+    private func prepareController(for direction: Direction,
+                                   and state: ContainerState,
+                                   using controller: SwipeChildViewController) {
         switch (direction,state) {
         case (.left,.root): show(vc: controller, with: .right)
         case (.right,.root): show(vc: controller, with: .left)
@@ -163,9 +178,8 @@ public final class AHSwipeViewControllerContainer: UIViewController {
                       with newState: ContainerState) {
         
         let context = self.context(for: lockedDirection, newState: newState, vc: vc)
-        
-        addNavigation(for: vc)
         addBackground(for: vc)
+        addNavigation(for: vc)
         prepareForShow(vc: vc)
         prepareAnimator(for: vc.view, with: context, completed: {
             self.state = newState
@@ -199,8 +213,8 @@ public final class AHSwipeViewControllerContainer: UIViewController {
             self.removeBackground(for: vc)
             
         }) {
-            self.addNavigation(for: vc)
             self.addBackground(for: vc)
+            self.addNavigation(for: vc)
             self.finilizeHide(vc: vc, cancel: true)
             vc.view.frame = self.frameProvider.initialFrame(forContext: context)
         }
@@ -283,11 +297,11 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     
     private func controller(for state: ContainerState) -> SwipeChildViewController? {
         switch state {
-        case .left: return leftVC
-        case .right: return rightVC
-        case .root: return rootVC
-        case .bottom: return bottomVC
-        case .top: return upperVC
+            case .left: return leftVC
+            case .right: return rightVC
+            case .root: return rootVC
+            case .bottom: return bottomVC
+            case .top: return upperVC
         default: return nil
         }
     }
