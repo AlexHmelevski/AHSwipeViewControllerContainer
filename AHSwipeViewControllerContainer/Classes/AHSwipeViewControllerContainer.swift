@@ -38,7 +38,6 @@ public enum ContainerState {
     case top
     case bottom
     case root
-    case inProgress
 }
 
 
@@ -92,13 +91,16 @@ public final class AHSwipeViewControllerContainer: UIViewController {
     public override func childViewControllerForScreenEdgesDeferringSystemGestures() -> UIViewController? { return currentVC }
     
     
-    public func chande(to newState: ContainerState) {
+    public func change(to newState: ContainerState) {
         switch (state, newState) {
         case (_ ,.root):
             if let currentVC = currentVC {
                 hide(vc: currentVC, with: newState)
             }
-            
+        case (.root, _) :
+            if let nextVC = controller(for: newState) {
+                show(vc: nextVC, with: newState)
+            }
         default: break
         }
         animator?.startAutomatic()

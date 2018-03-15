@@ -134,12 +134,12 @@ class ViewController: UIViewController {
         vc.view.backgroundColor = .red
         let container = AHSwipeViewControllerContainer(rootVC: vc)
         vc.didTapClosure = {
-            container.chande(to: .root)
+            container.change(to: .root)
         }
         let upVC = SWViewController()
         
         upVC.didTapClosure = {
-           container.chande(to: .root)
+           container.change(to: .root)
         }
         
         container.upperVC = upVC
@@ -148,7 +148,7 @@ class ViewController: UIViewController {
         let btVC = SWViewController()
         
         btVC.didTapClosure = {
-            container.chande(to: .root)
+            container.change(to: .root)
         }
         
         container.bottomVC = btVC
@@ -156,7 +156,7 @@ class ViewController: UIViewController {
         let lVC = SWViewController()
         
         lVC.didTapClosure = {
-            container.chande(to: .root)
+            container.change(to: .root)
         }
         
         container.leftVC = lVC
@@ -164,10 +164,11 @@ class ViewController: UIViewController {
         let rVC = SWViewController()
         
         rVC.didTapClosure = {
-            container.chande(to: .root)
+            container.change(to: .root)
         }
        
         container.rightVC = rVC
-        self.present(container, animated: true, completion: nil)
+        self.present(container, animated: false, completion: nil)
+        container.change(to: .left)
     }
 }
